@@ -1,4 +1,4 @@
-# Next.js + TypeScript + Tailwind CSS Project
+# Next.js Project Setup and Basics
 
 
 # Project Description
