@@ -6,7 +6,11 @@ export default function Header() {
             <h1 className="text-lg font-bold">Beyound</h1>
             <ul className="flex gap-4">
                 <li>
-                    <Link href="/">Home</Link>
+                    <Link href="/">Index</Link>
+                </li>
+                
+                <li>
+                    <Link href="/home">Home</Link>
                 </li>
                 <li>
                     <Link href="/about">About</Link>
