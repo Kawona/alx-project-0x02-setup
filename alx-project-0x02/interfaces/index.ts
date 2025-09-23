@@ -11,3 +11,8 @@ export interface User {
     email: string;
     username: number;
 }
+
+export interface CardProps {
+    title: string;
+    content: string;
+}
