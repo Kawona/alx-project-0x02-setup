@@ -16,3 +16,8 @@ export interface CardProps {
     title: string;
     content: string;
 }
+
+export interface PostModal {
+    title: string;
+    content: string;
+}
