@@ -3,6 +3,7 @@
 import React from "react";
 import Card from "@/components/common/Card";
 import PostModal from "@/components/common/PostModal";
+import Header from "@/components/layout/Header";
 import { useState } from "react";
 
 type Post = {
@@ -19,6 +20,8 @@ export default function HomePage() {
     };
 
     return (
+        <>
+            <Header />
         <div className="flex min-h-screen flex-col items-center justify-center bg-gray-800">
             <h1 className="text-4xl font-bold text-gray-50 mb-4">
                 Welcome to my Next.js App
@@ -50,5 +53,7 @@ export default function HomePage() {
                 onSubmit={handleAddPost}
             />
         </div>
+        </>
+        
     );
 }
