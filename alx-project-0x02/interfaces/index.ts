@@ -2,7 +2,7 @@ export interface Post {
     id: number;
     title: string;
     body: string;
-    userld: number;
+    userid: number;
 }
 
 export interface User {
@@ -31,8 +31,18 @@ export interface ButtonProps {
 }
 
 export interface PostProps {
-    Id: number;
+    id: number;
     title: string;
     content: string;
     userId: number;
+}
+
+export interface UserProps {
+    id: number;
+    name: string;
+    email: string;
+    address: {
+        street: string;
+        city: string;
+    };
 }

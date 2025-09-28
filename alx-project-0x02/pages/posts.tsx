@@ -1,15 +1,13 @@
 import Header from "@/components/layout/Header";
 import PostCard from "@/components/common/PostCard";
 import { PostProps } from "@/interfaces";
-import { GetStaticProps } from 'react';
-
+import { GetStaticProps } from "next";
 
 type PostsPageProps = {
-  posts: PostProps[]
-}
+  posts: PostProps[];
+};
 
-export default function PostsPage() {
-
+export default function PostsPage({ posts }: PostsPageProps) {
   return (
     <div>
       <Header />
@@ -18,8 +16,8 @@ export default function PostsPage() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
             <PostCard
-              key={post.Id}
-              Id={post.Id}
+              key={post.id}
+              id={post.id}
               title={post.title}
               content={post.content}
               userId={post.userId}
@@ -32,11 +30,11 @@ export default function PostsPage() {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("https://jsonplacholder.typicode.com/posts");
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   const data = await res.json();
 
   const posts: PostProps[] = data.map((post: any) => ({
-    Id: post.Id,
+    id: post.id,
     title: post.title,
     content: post.body,
     userId: post.userId,
